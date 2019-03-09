@@ -49,6 +49,7 @@ namespace _123
                 Console.WriteLine(a1);
                 Console.WriteLine(c1);
             }
+            else if (a1 == b1 )
             else
             {
                 Console.WriteLine(b1);
