@@ -10,90 +10,61 @@ namespace a_zz_a
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Input a..");
-            string a = Console.ReadLine();
-            Console.WriteLine("Input b..");
-            string b = Console.ReadLine();
-            Console.WriteLine("Input c..");
-            string c = Console.ReadLine();
-            int a1 = int.Parse(a);
-            int b1 = int.Parse(b);
-            int c1 = int.Parse(c);
-            int abc = 100 * a1 + 10 * b1 + c1;
-            Console.WriteLine(abc);
-            if (abc <= 999 && abc >= 100)
+            string number = Console.ReadLine();
+            int number_1 = int.Parse(number);
+            int a = number_1 / 100;
+            int b = (number_1 - a * 100) / 10;
+            int c = (number_1 - (a * 100 + b * 10));
+            if (a > b && a > c && a!=c)
             {
-                if (a1 < b1 && b1 < c1)
+                if (b > c)
                 {
-                    Console.WriteLine("in ascending order");
-                    Console.WriteLine(a1);
-                    Console.WriteLine(b1);
-                    Console.WriteLine(c1);
-                    Console.WriteLine("in descending order");
-                    Console.WriteLine(c1);
-                    Console.WriteLine(b1);
-                    Console.WriteLine(a1);
-                }
-                else if (a1 < c1 && c1 < b1)
-                {
-                    Console.WriteLine("in ascending order");
-                    Console.WriteLine(a1);
-                    Console.WriteLine(c1);
-                    Console.WriteLine(b1);
-                    Console.WriteLine("in descending order");
-                    Console.WriteLine(b1);
-                    Console.WriteLine(c1);
-                    Console.WriteLine(a1);
-                }
-                else if (b1 > a1 && a1 > c1)
-                {
-                    Console.WriteLine("in ascending order");
-                    Console.WriteLine(c1);
-                    Console.WriteLine(a1);
-                    Console.WriteLine(b1);
-                    Console.WriteLine("in descending order");
-                    Console.WriteLine(b1);
-                    Console.WriteLine(a1);
-                    Console.WriteLine(c1);
-                }
-                else if (c1 < b1 && b1 < a1)
-                {
-                    Console.WriteLine("in ascending order");
-                    Console.WriteLine(c1);
-                    Console.WriteLine(b1);
-                    Console.WriteLine(a1);
-                    Console.WriteLine("in descending order");
-                    Console.WriteLine(a1);
-                    Console.WriteLine(b1);
-                    Console.WriteLine(c1);
-                }
-                else if (b1 < a1 && a1 < c1)
-                {
-                    Console.WriteLine("in ascending order");
-                    Console.WriteLine(b1);
-                    Console.WriteLine(a1);
-                    Console.WriteLine(c1);
-                    Console.WriteLine("in descending order");
-                    Console.WriteLine(c1);
-                    Console.WriteLine(a1);
-                    Console.WriteLine(b1);
+                    Console.WriteLine(c + "," + b + "," +a);
                 }
                 else
                 {
-                    Console.WriteLine("in ascending order");
-                    Console.WriteLine(b1);
-                    Console.WriteLine(c1);
-                    Console.WriteLine(a1);
-                    Console.WriteLine("in descending order");
-                    Console.WriteLine(a1);
-                    Console.WriteLine(c1);
-                    Console.WriteLine(b1);
+                    Console.WriteLine(b+ "," +c+ ","+a);
+                }
+            }
+            else if (b > c)
+            {
+                if (a>c)
+                { Console.WriteLine(c+ "," +a+ "," +b);
+                }
+                else
+                {
+                    Console.WriteLine(a + "," +c+ "," +b);
                 }
             }
             else
             {
-                Console.WriteLine("Your number must have 3 digits");
+                if (a == b && a==c && b==c)
+                {
+                    Console.WriteLine("all numbers are equal");
+
+                }
+                else if  (a == c && b>c)
+                {
+                    Console.WriteLine(a+ "=" +c+ "<" + b);
+                }
+                else if (a == c && b < c)
+                {
+                    Console.WriteLine(a + "=" +b + "<" +c);
+                }
+                else if (b==c && a > c)
+                {
+                    Console.WriteLine(a+ "=" +b+ "<" +a);
+                }
+                else if (a>b)
+                {
+                    Console.WriteLine(b + "," +a+ "," +c);
+                }
+                else
+                {
+                    Console.WriteLine(a + "," +b+ "," +c);
+                }
             }
+         
             Console.Read();
         }
     }
