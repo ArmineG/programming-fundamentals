@@ -10,38 +10,63 @@ namespace abc
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Input a..");
-            string a = Console.ReadLine();
-            Console.WriteLine("Input b..");
-            string b = Console.ReadLine();
-            Console.WriteLine("Input c..");
-            string c = Console.ReadLine();
-            int a1 = int.Parse(a);
-            int b1 = int.Parse(b);
-            int c1 = int.Parse(c);
-            int abc = 100 * a1 + 10 * b1 + c1;
-            Console.WriteLine(abc);
-            if (abc<=999 && abc>=100)
+            string number = Console.ReadLine();
+            int number_1 = int.Parse(number);
+            int a = number_1 / 100;
+            int b = (number_1 - a * 100) / 10;
+            int c = (number_1 - (a * 100 + b * 10));
+            if (a > b && a > c && a != c && a!=b)
             {
-
-
-                if (a1 > b1 && a1 > c1)
+                Console.WriteLine(a);
+            }
+           else if (b>a && b>c && a!=b && b != c)
+            {
+                Console.WriteLine(b);
+            }
+            else if (c>a && c>b && c!=a && c != b)
+            {
+                Console.WriteLine(c);
+            }
+            else if (a==b && b!=c && a!=c )
+            {
+                if (a > c)
                 {
-                    Console.WriteLine(a1);
-                }
-                else if (b1 > a1 && b1 > c1)
-                {
-                    Console.WriteLine(b1);
+                    Console.WriteLine(a);
                 }
                 else
                 {
-                    Console.WriteLine(c1);
+                    Console.WriteLine(c);
+                }
+
+            }
+            else if (b == c && a!=b && a!=c)
+            {
+                if (b > a)
+                {
+                    Console.WriteLine(b);
+                   
+                }
+                else 
+                {
+                    Console.WriteLine(a);
+                }
+            }
+            else if (a ==c && b!=c && a != b)
+            {
+                if (a > b)
+                {
+                    Console.WriteLine(a);
+                }
+                else
+                {
+                    Console.WriteLine(b);
                 }
             }
             else
             {
-                Console.WriteLine("Your number must have 3 digits");
+                Console.WriteLine("all digits are equal");
             }
+          
             Console.Read();
 
            
