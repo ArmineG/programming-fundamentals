@@ -16,24 +16,18 @@ namespace progress
             string b = Console.ReadLine();
             Console.WriteLine("Input c..");
             string c = Console.ReadLine();
-            Console.WriteLine("Input d..");
-            string d = Console.ReadLine();
+
             double a1 = double.Parse(a);
             double b1 = double.Parse(b);
             double c1 = double.Parse(c);
-            double d1 = double.Parse(d);
-            if (b1 == a1 + d1 && c1 == b1 + d1)
+            double d = b1 - a1;
+            double k = b1 + d;
+          
+            if (c1 == k)
             {
                 Console.WriteLine(true);
             }
-            else if (a1 == b1 + d1 && c1 == a1 + d1)
-            {
-                Console.WriteLine(true);
-            }
-            else if (a1 == c1 + d1 && b1 == a1 + d1)
-            {
-                Console.WriteLine(true);
-            }
+            
             else
             {
                 Console.WriteLine(false);
