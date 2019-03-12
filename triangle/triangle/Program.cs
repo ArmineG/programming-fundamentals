@@ -11,28 +11,19 @@ namespace triangle
         static void Main(string[] args)
         {
             string a = Console.ReadLine();
-            int a1 = int.Parse(a);
-            if (a1 > 3)
+            int row = int.Parse(a);
+            for (int i = 0; i < row; i++)
             {
-                int count = 1;
-                int count2 = 0;
-                while (a1 != 0)
+                for (int j = 0; j < row - i; j++)
                 {
-                    a1 = a1 - 1;
-                    count2 = count2 + 1;
-                    count = count2;
                     Console.Write(" ");
-                    while (count != 0) 
-                    {
-                        Console.Write("*");
-                        count = count - 1;
-                    }
-                    Console.WriteLine();
+
                 }
-            }
-            else
-            {
-                Console.WriteLine("Error");
+                for (int k = 0; k <= i; k++)
+                {
+                    Console.Write("* ");
+                }
+                Console.WriteLine();
             }
             Console.Read();
         }
