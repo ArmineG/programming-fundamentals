@@ -19,9 +19,61 @@ namespace max
             int a1 = int.Parse(a);
             int b1 = int.Parse(b);
             int c1 = int.Parse(c);
-            int abc = 100 * a1 + 10 * b1 + c1;
-            
+            if (a1 > b1 && b1 > c1 )
+            {if (a1 != b1 && a1 != c1 && b1 != c1)
+                {
+                    Console.WriteLine(c1);
+                    Console.WriteLine(b1);
+                    Console.WriteLine(a1);
+                }
+            else if (a1 =b1 && a1!= c1 && b1 != c1)
+                {
+                    Console.WriteLine(c1);
+                    Console.WriteLine(b1);
+                    Console.WriteLine(a1);
+                }
+            else if (a1 != b1 && a1 != c1 && b1 != c1)
+                {
 
+                }
+               
+                    
+            }
+            else if (b1 > a1 && a1 > c1 && a1 != b1 && a1 != c1 && b1 != c1)
+            {
+                Console.WriteLine(c1);
+                Console.WriteLine(a1);
+                Console.WriteLine(b1);
+            }
+            else if (a1 > c1 && c1 > b1 && a1 != b1 && a1 != c1 && b1 != c1)
+            {
+                Console.WriteLine(b1);
+                Console.WriteLine(c1);
+                Console.WriteLine(a1);
+            }
+            else if (c1 > a1 && a1 > b1 && a1 != b1 && a1 != c1 && b1 != c1)
+            {
+                Console.WriteLine(b1);
+                Console.WriteLine(a1);
+                Console.WriteLine(c1);
+            }
+            else if (c1 > b1 && b1 > a1 && a1 != b1 && a1 != c1 && b1 != c1)
+            {
+                Console.WriteLine(a1);
+                Console.WriteLine(b1);
+                Console.WriteLine(c1);
+            }
+            else if (b1 > c1 && c1 > a1 && a1 != b1 && a1 != c1 && b1 != c1)
+            {
+                Console.WriteLine(a1);
+                Console.WriteLine(c1);
+                Console.WriteLine(b1);
+            }
+            else
+            {
+                Console.WriteLine("all numbers are equal");
+            }
+            Console.Read();
         }
     }
 }
